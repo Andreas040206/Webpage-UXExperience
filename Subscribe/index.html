@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UXExperience</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="form1Con">
+        <div class="headCon">
+            <div class="headOpl">
+                <div class="headUp">Dit abonnoment starter her.</div>
+                <div class="headLow">Felter der skal udfyldes er markeret med *</div>
+             </div>
+           <div class="logoCon">
+            <div class="logoHead">UX</div>
+            <div class="logoBot">Experience</div>
+         </div>
+        </div>
+        <form action="" method="get" id="subsciptionForm" onsubmit="return scriptValidate()">
+         <section class="SectionOne">
+          <div class="inputNameCon">
+            <label for="inputName" id="labelInName">Navn</label>
+            <input type="text" name="inputName" id="inputName">
+          </div>
+          <div class="inputUsernameCon">
+            <label for="inputUsername" id="labelInName">Brugernavn*</label>
+            <input type="text" name="inputUsername" id="indputUsername" required>
+        </div>
+        <div class="inputMailCon">
+            <label for="inputMail" id="labelInName">Mail*</label>
+            <input type="mail" name="inputMail" id="inputMail" required placeholder="example@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </div>
+        <div class="inputPasswordCon">
+            <div class="passLabel">Kode*</div>
+            <label for="inputPassword" id="inputPassLab">Min. 8 tegn  og maks 16 tegn</label>
+            <input type="password" name="inputPassword" id="inputPassword" class="invalidRedBor" required >
+        </div>
+        <div class="inputLocationCon">
+            <label for="inputLocation" id="labelInName">Bopael</label>
+            <input type="text" name="inputLocation" id="inputLocation">
+        </div>
+        <div class="inputRePasswordCon">
+            <div class="passLabel">Gentag kode*</div>
+            <label for="inputRePassword" id="inputRePassLab">Den gentagede kode er ikke identisk</label>
+            <input type="password" name="inputRePassword" id="inputRePassword"  required>
+        </div>
+      </section>
+      <div class="paymentHeader">Betalingsoplysninger</div>
+      <div class="formFooter">
+        <section class="paymentInfo">
+            <div class="inputCardNumCon">
+                <label for="inputCardNum" class="inputCardNum">Kortnummer</label>
+                <input type="text" name="inputCardNum" id="inputCardNum" pattern="[0-9]{4}(-|[\s])?[0-9]{4}(-|[\s])?[0-9]{4}(-|\s)?[0-9]{4}" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+            </div>
+            <div class="inputExpireDateCon">
+                <label for="inputExpireDate">Udloebsdato</label>
+                <input type="text" name="inputExpireDate" id="inputExpireDate" pattern="[0-9]{2}/[2-4][0-9]" placeholder="MM/YY" required>
+            </div>
+            <div class="inputCVCNumCon">
+                <label for="inputCVCNum">CVC nr.</label>
+                <input type="text" name="inputCVCNum" id="inputCVCNum" pattern="[0-9]{3}" required>
+            </div>
+        </section>
+        <div class="newsOrNoCon">
+           <div>
+            <input type="radio" name="newsOrNo" id="newsYes" checked>
+            <label for="newsYes" class="newsYesLab">Ja, jeg vil gerne tilmeldes UXExperince's nyhedsbrev og modtage special offers og information om koncurrencer.</label>
+           </div>
+           <div>
+            <input type="radio" name="newsOrNo" id="newsNo">
+            <label for="newsNo">Nej, ellers tak</label>
+        </div>
+        </div>
+      </div>
+     </form>
+    </div>
+    <div class="form2Con">
+        <div>
+            <input type="checkbox" name="readPrivPol" id="readPrivPol" required form="subsciptionForm">
+            <div for="readPrivPol" class="readPrivPolLab">* Jeg har læst og forstået UXExperience's <span class="privLivLink"><a href="./index.html">privatlivspolitik</a></span></div>
+        </div>
+        <button id="submitBtn" type="submit" form="subsciptionForm">Abonner</button>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html> 

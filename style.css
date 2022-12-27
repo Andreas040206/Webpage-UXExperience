@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+body{
+    height: 200vh;
+    display: grid;
+    padding: 0px;
+    margin: 0px;
+    grid-template-columns: minmax(200px, 1fr) 5fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar projects";
+    background-color: #6900abff;
+    font-family: 'Roboto', sans-serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #40006b;
+}
+
+.headerCon {
+    display: flex;
+    flex-direction: column;
+    background-color: #24003cff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.366);
+}
+
+.topHeader{
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+    padding: 30px;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.searchIcon{
+    display: flex;
+    height: 45px;
+    width: auto;
+}
+
+.searchBar{
+    width: auto;
+    flex: 5 1 auto;
+    height: 60px;
+    background-color: #590095ff;
+    border-radius: 30px;
+}
+
+.profilePicWrap{
+    display: flex;
+    flex: 0.5 0 auto;
+    justify-content: flex-end;
+}
+
+.profilePic{
+    width: 140px;
+    height: auto;
+}
+
+.profileName{
+    display: flex;
+    flex: 0.5 1 auto;
+    color: #a211fe;
+    font-size: 40px;
+    width: 300px;
+}
+
+.logo{
+    height: 120px;
+    width: auto;
+}
+
+.botHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40%;
+    padding: 20px 40px;
+    padding-bottom: 50px;
+}
+
+.leftHead{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex: 1;
+    row-gap: 30px;
+}
+
+.icons{
+    height: 35px;
+}
+
+button{
+    height: 70px;
+    padding: 0 38px;
+    width: auto;
+    justify-self: center;
+    border-radius: 60px;
+    border: 0px;
+    background-color:#40006bff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-size: 38px;
+    font-weight: 1000;
+    color: #a211fe;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.218);
+}
+
+.subscribeBtn{
+    color: #40006b;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.218);
+    background-color: #8f14ddff;
+}
+
+
+.wrapper{ 
+    grid-area: sidebar;
+    position: relative;
+    background-color: #46006dff;
+    position: relative;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: max(200px, 16.66667vw);
+    position: fixed;
+    display: grid;
+    grid-template-rows: 1.5fr 2fr 2fr 5fr;
+    grid-template-columns: 1fr;
+    font-size: 32px;
+    font-weight: 1000;
+    color: #a211fe;
+}
+
+.dashbord{
+    display: flex;
+    align-items: flex-end;
+    padding: 0px 20px;
+    font-size: max(2.5vw , 36px);
+}
+
+.sidebar > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: -10px;
+}
+
+.sidebar > ul > li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    height: 20px;
+}
+
+.sidebar > ul > li > div {
+    font-size: 32px;
+}
+
+.menuIcon{
+    height: 24px;
+    width: 28px;
+}
+
+.menuIcon2{
+    height: 24px;
+    width: auto;
+}
+
+.logOut {
+    display: flex;
+    align-items: flex-end;
+    padding: 40px 0px;
+}
+
+.logOut > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 30px;
+    gap: 12px;
+    height: 20px;
+}
+
+.contentCon {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+}
+
+
+.contentCon {
+    grid-area: projects;
+}
+
+.projectsCon{
+    padding: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+    grid-auto-rows: 700px;
+    gap: 20px;
+}
+
+.projectsCon > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.projectsCon > li > div {
+    padding: 0px 50px;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    background: linear-gradient(225deg, #4e0082ff, #21001fff 70.71%);
+    box-shadow: 20px 30px 10px rgba(0, 0, 0, 0.218);
+}
+
+.projectsCon > li > div > p {
+    font-size: 32px;
+    font-weight: 1000;
+    color: #a211fe;
+}
+
+.announcementsCon{
+    padding: 40px;
+}
+
+.announcementsCon > div {
+    height: 800px;
+    width: calc(100% - 50px);
+    border-radius: 30px;
+    background: #3a0056ff;
+    padding: 1px 30px;
+    color: #a211fe;
+    font-size: 40px;
+    font-weight: 1000;
+    box-shadow: 20px 30px 10px rgba(0, 0, 0, 0.218);
+}
